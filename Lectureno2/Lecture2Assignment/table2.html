@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Table 2</title>
+</head>
+
+<body>
+	<center><h1>Table Assignment 2</h1></center>
+<table  border="1" align="center"  width="600">
+		<tr align="center">
+			<th width="170">Header Column 1</th>
+			<th width="130">Header Column 2</th>
+			<th width="170">Header Column 3</th>
+			<th width="130">Header Column 4</th>
+		</tr>
+		<tr>
+			<td rowspan="2" >Row 2-Item 1</td>
+			<td rowspan="2" >Row 2-Item 2</td>
+			<td rowspan="5" align="left" ><strong>Row 2 :Nested Table 1</strong><br><br><br>
+				
+				<table border="1">
+					<tr>
+					<th >Row 1 Header</th>
+						
+						<td>Item</td>
+						
+					</tr>
+					<tr><th >Row 1 Header</th>
+						
+						<td>Item</td></tr>
+					<tr><th >Row 1 Header</th>
+						
+						<td>Item</td></tr>
+				</table>
+			</td>
+			
+			<td rowspan="2">Row 2 - Item4<br>A second Line</td>
+		</tr>
+		<tr>
+			
+		</tr>
+		<tr>
+			<td rowspan="4" align="left"><strong>Row3: Nested Table 2</strong>
+				<br><br><br>
+			  <table border="1" >
+					
+				<tr><th>Row 1 Header</th><td>Item</td></tr>
+					<tr><th>Row 2 Header</th><td>Item</td></tr>
+				</table>
+			
+			</td>
+			<td rowspan="4" align="center">Row 3 - Item 2</td>
+			<td align="center" rowspan="5">Row 3 - Item 3</td>
+		</tr>
+		
+	<tr></tr>
+	<tr></tr>
+	<tr></tr>
+	<tr><td>Row4 - Item 1</td>
+		<td>Row4 - Item 2</td>
+		<td>Row4 - Item 3</td>
+	</tr>
+	<tr>
+		<td colspan="4" width="600">Row5 - Last row of outer table</td>
+	</tr>
+</table>
+</body>
+</html>
