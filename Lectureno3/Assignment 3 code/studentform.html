@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Student Form</title>
+</head>
+
+<body>
+	<form>
+		<fieldset>
+			<legend style="color: red;">StudentForm</legend>
+			<hr style="height:3px; background-color: gray;">
+		<h1 style="color: red;">Student Form</h1>
+		<table >
+			
+			<tr>
+				<td width="100"><label>Name:</label></td>
+				<td ><input type="text"  maxlength="15" required/></td>
+				
+			</tr>
+			<tr>
+				<td width="100"><label>Email:</label></td>
+				<td><input type="email" required/></td>
+			</tr>
+			<tr>
+				<td><label>Password:</label></td>
+				<td><input type="password" required/></td>
+			</tr>
+			<tr>
+				<td rowspan="2" valign="top"><label>Gender:</label></td>
+				<td><input type="radio" name="a" />Male</td>
+				</tr>
+			<tr>
+				<td><input type="radio" name="a" />Female</td>
+			</tr>
+			<tr>
+				<td rowspan="3" valign="top">Hobby</td>
+				<td><input type="checkbox"/>Gardening</td>
+			</tr>
+			<tr><td><input type="checkbox"/>Reading</td></tr>
+			<tr><td><input type="checkbox"/>Cooking</td></tr>
+			<tr>
+				<td><label>City</label></td>
+				<td><select>
+					<option value="Lahore">Lahore</option>
+					<option value="Islamabad">Islamabad</option>
+					<option value="Peshawar">Peshawar</option>
+					<option value="Karachi">Karachi</option>
+					<option value="select" selected>-----Select a city-----</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Message:</label></td>
+				<td><textarea rows="15" cols="30" style="resize: none"></textarea></td>
+			</tr>
+			<tr>
+				<td width="100"></td>
+				<td><input type="submit" value="Getform"/><input type="reset"/></td>
+			</tr>
+			
+		</table>
+			
+			</fieldset>
+	</form>
+	<button><a href="home.html" style="color: red;">Go To Home Page</a></button>
+	
+</body>
+</html>
