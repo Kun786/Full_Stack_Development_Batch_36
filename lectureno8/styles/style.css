@@ -1,0 +1,143 @@
+body{
+    display: inline !important;
+}
+
+.navigation>ul>li{
+    display: inline;
+    padding-left: 180px;
+    display: inline-block;
+}
+
+.navigation>ul>li:hover{
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: black;
+    color: aliceblue;
+    cursor: pointer;
+    display: inline-block;
+
+}
+
+.logo{
+    margin-left: 15px;
+}
+
+.hero{
+    background-image: url('../assets/wallpapersden.com_sails-ship-in-ocean_2560x1440.jpg');
+    height: 1500px;
+    background-attachment:fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+.group{
+    
+}
+
+.cardone{
+background-color: aqua;
+height: 300px;
+width: 400px;
+display: inline-block;
+margin-left: 200px;
+}
+
+.cardtwo{
+    background-color: saddlebrown;
+height: 300px;
+width: 400px;
+display: inline-block;
+margin-left: 200px;
+}
+
+.cardthree{
+    background-color: salmon;
+height: 300px;
+width: 400px;
+display: inline-block;
+margin-left: 200px;
+}
+
+.cardone>img{
+    height: 100px;
+    width: 100px;
+}
+
+.cardtwo>img{
+    height: 100px;
+    width: 100px;
+}
+
+.cardthree>img{
+    height: 100px;
+    width: 100px;
+}
+
+.cardone>h1{
+    text-align: center;
+}
+.cardtwo>h1{
+    text-align: center;
+}
+.cardthree>h1{
+    text-align: center;
+}
+
+.cardone>button{
+    width:98%;
+    height: 70px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.cardone>button:hover{
+   background-color: greenyellow;
+   border-radius: 2px;
+   font-size: larger;
+   cursor: pointer;
+}
+
+.footer{
+    background: #9796f0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fbc7d4, #9796f0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fbc7d4, #9796f0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+height: 300px;
+}
+
+
+.child1{
+    width: 500px;
+    height: auto;
+    display: inline-block;
+    margin-top: 200px;
+}
+
+.child2{
+    width: 500px;
+    height: auto;
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.child3{
+    width: 500px;
+    height: auto;
+    display: inline-block;
+    margin-top: 70px;
+}
+.child3>i{
+    padding: 20px;
+    font-size: 100px;
+}
+
+.fa-facebook:hover{
+    color: blue;
+}
+
+.fa-instagram:hover{
+    color:red
+}
+
+.fa-linkedin:hover{
+    color:skyblue
+}
