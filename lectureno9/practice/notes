@@ -9,3 +9,47 @@ Helper properties
 
 (left, right) you can only use one
 (top, bottom) you can only use one
+
+.con4{
+            border-radius: 5px;
+            border:1px solid limegreen;
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            top:200px;
+            left: 500px;
+            animation-name: con1;
+            animation-duration: 5s;
+        }
+
+        @keyframes con1 {
+            0% {
+                background-color: lightcoral;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
