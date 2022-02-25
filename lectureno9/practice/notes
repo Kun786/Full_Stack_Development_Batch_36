@@ -1,0 +1,11 @@
+Css Position values 
+1 Static
+2 Relative
+3 Absolute
+4 Fixed
+5 Sticky (not work on all broswers)
+
+Helper properties
+
+(left, right) you can only use one
+(top, bottom) you can only use one

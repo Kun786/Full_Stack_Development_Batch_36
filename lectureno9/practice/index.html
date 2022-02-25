@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border-radius: 5px;
+            background-color: lightcoral;
+            height: 300px;
+            width: 300px;
+            position: relative; /*Yani jahan wo khara hai wahin say*/
+            left: 100px;
+        }
+
+        .container2{
+            border-radius: 5px;
+            background-color: lightcoral;
+            height: 300px;
+            width: 300px;
+            position: absolute; /*Yani jahan wo khara hai wahin say*/
+            z-index: 99;
+        }
+    </style>
+</head>
+<body>
+    <h1>Some Text : Css Positions</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni, consectetur culpa, obcaecati at corporis, sit possimus aspernatur sequi minima non. Aliquam veritatis adipisci labore nobis deserunt, reiciendis vero nam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis facere optio quasi fuga atque sint, autem deserunt! Dolore magni alias possimus quam quod eos, quos, nesciunt voluptate iste, sint amet?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit nam ab illo maxime modi eveniet, corporis, in eius perspiciatis, suscipit omnis. Distinctio blanditiis mollitia laborum fuga itaque autem, assumenda officiis!
+    </p>
+    <div class="container">
+
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni, consectetur culpa, obcaecati at corporis, sit possimus aspernatur sequi minima non. Aliquam veritatis adipisci labore nobis deserunt, reiciendis vero nam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis facere optio quasi fuga atque sint, autem deserunt! Dolore magni alias possimus quam quod eos, quos, nesciunt voluptate iste, sint amet?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit nam ab illo maxime modi eveniet, corporis, in eius perspiciatis, suscipit omnis. Distinctio blanditiis mollitia laborum fuga itaque autem, assumenda officiis!
+    </p>
+
+    <div class="container2">
+        <h1 style="text-align: center;z-index: -99;position: absolute;">Hi</h1>
+    </div>
+    
+</body>
+</html>
