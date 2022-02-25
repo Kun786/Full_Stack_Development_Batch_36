@@ -17,6 +17,7 @@
             left: 500px;
             animation-name: con1;
             animation-duration: 5s;
+            animation-iteration-count:3;
         }
 
         .con2 {
@@ -29,6 +30,8 @@
             left: 500px;
             animation-name: con2;
             animation-duration: 5s;
+            animation-iteration-count:3;
+            animation-direction: reverse;
         }
 
         .con3 {
@@ -41,6 +44,7 @@
             left: 500px;
             animation-name: con3;
             animation-duration: 5s;
+            
         }
 
         .con4 {
@@ -57,21 +61,21 @@
 
         @keyframes con1 {
             0% {
-                background-color: lightcoral;
-                top: 300px;
-                left: 600px;
+                background-color: red;
+                left: 0px;
+                top: 0px;
             }
 
             25% {
                 background-color: yellow;
-                left: 800px;
-                top: 900px;
+                left: 200px;
+                top: 0px;
             }
 
             50% {
                 background-color: blue;
                 left: 200px;
-                top: 700px;
+                top: 200px;
             }
 
             75% {
@@ -82,16 +86,16 @@
 
             100% {
                 background-color: red;
-                left: 700px;
-                top: 800px;
+                left: 0px;
+                top: 0px;
             }
         }
 
         @keyframes con2 {
             0% {
-                background-color: red;
-                top: 200px;
-                left: 500px;
+                background-color: lightcoral;
+                left: 0px;
+                top: 0px;
             }
 
             25% {

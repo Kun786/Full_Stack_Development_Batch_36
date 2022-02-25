@@ -10,6 +10,25 @@ Helper properties
 (left, right) you can only use one
 (top, bottom) you can only use one
 
+for animation you need two things
+animation key pair value
+@keyframe identifier {}
+
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 300px;}
+}
+
+ease - Specifies an animation with a slow start, then fast, then end slowly (this is default)
+linear - Specifies an animation with the same speed from start to end
+ease-in - Specifies an animation with a slow start
+ease-out - Specifies an animation with a slow end
+ease-in-out - Specifies an animation with a slow start and end
 .con4{
             border-radius: 5px;
             border:1px solid limegreen;
@@ -53,3 +72,18 @@ Helper properties
                 top: 0px;
             }
         }
+        
+        
+        Animation Shorthand property
+        div {
+  animation-name: example;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+div {
+  animation: example 5s linear 2s infinite alternate;
+}s

@@ -1,0 +1,38 @@
+.relative{
+    background-color: lightcoral;
+    border-radius: 5px;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.absolute{
+    background-color: lightgreen;
+    border-radius: 5px;
+    height: 300px;
+    width: 300px;
+    position:absolute;
+    z-index: -1;
+}
+
+.fixed{
+    background-color: darkgreen;
+    border-radius: 5px;
+    height: 300px;
+    width: 300px;
+    position: fixed;
+    left: 125px;
+}
+
+.sticky{
+    background-color: darkkhaki;
+    border-radius: 5px;
+    height: 300px;
+    width: 300px;
+    position: fixed;
+    margin-left: 525px;
+    position: sticky;
+    top:50px;
+}
+
