@@ -1,0 +1,29 @@
+.parent{
+    display: flex;
+    height: 98vh;
+    background-color: lightgreen;
+}
+
+
+.div1{
+    background-color: yellow;
+    height: 200px;
+    width: 400px;
+    order:2;
+}
+
+.div2{
+    background-color: red;
+    height: 200px;
+    width: 400px;
+    margin-left: 5px;
+    order:3;
+}
+
+.div3{
+    background-color: blue;
+    height: 200px;
+    width: 400px;
+    margin-left: 5px;
+    order:1;
+}
