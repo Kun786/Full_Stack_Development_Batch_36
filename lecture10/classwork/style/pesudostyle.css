@@ -1,0 +1,10 @@
+p:first-child::before{
+    content: 'Hi i am before or i am prefix ';
+}
+
+p:first-child::after{
+    content: " i am postfix";
+}
+p:first-child{
+    color: blue;
+}
