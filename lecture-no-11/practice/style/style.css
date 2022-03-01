@@ -1,0 +1,80 @@
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-image: url('./84303.jpg');
+    height: 68vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    flex-wrap: wrap;
+    font-size: 20px;
+}
+
+.logo{
+    margin-top: 10px;
+}
+
+.nav>ul{
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+}
+
+.nav>ul>li{
+    list-style: none;
+}
+
+.nav>ul>li:hover{
+    color: #fff;
+    text-shadow:
+    0 0 5px #0ff,
+    0 0 5px #0ff,
+    0 0 5px #0ff,
+    0 0 5px #0ff,
+    0 0 5px #0ff,
+    0 0 5px #0ff,
+    0 0 5px #0ff,
+    0 0 5px #0ff;
+      -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}
+
+.break{
+    flex-basis: 100%;
+    height: 0;
+}
+
+.heading>h1{
+    font-size: 90px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.heading>button{
+    width: 400px;
+    height: 50px;
+    background-color: transparent;
+    border:1px solid white;
+    border-radius:10px;
+    color: white;
+}
+
+.heading>button:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.nav>ul>li:nth-child(5)>button{
+    border: 1px solid green;
+    background-color: transparent;
+    border-radius: 2px;
+    color: white;
+}
+
+.nav>ul>li:nth-child(5)>button:hover{
+    background-color: white;
+    color: green;
+}

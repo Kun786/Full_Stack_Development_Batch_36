@@ -1,0 +1,118 @@
+nav{
+    background-image: url('../../practice/style/84303.jpg');
+    height: 68vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.logo{
+    margin-top: 15px;
+}
+
+.nav>ul{
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+}
+
+.nav>ul>li{
+    list-style: none;
+}
+
+.nav>ul>li:nth-child(5)>button{
+    background-color: transparent;
+    color: white;
+    border:1px solid white;
+    border-radius: 5px;
+}
+
+.nav>ul>li:nth-child(5)>button:hover{
+    background-color: white;
+    color: green;
+}
+
+.break{
+    flex-basis: 100%;
+    height: 0;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.div1{
+    height: 500px;
+    width: 350px;
+    border:1px solid green;
+    border-radius: 5px;
+    box-shadow: 5px 5px green;
+    padding: 10px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.div2{
+    height: 500px;
+    width: 350px;
+    border:1px solid green;
+    border-radius: 5px;
+    box-shadow: 5px 5px green;
+    padding: 10px;
+    padding-left: 15px;
+}
+.div3{
+    height: 500px;
+    width: 350px;
+    border:1px solid green;
+    border-radius: 5px;
+    box-shadow: 5px 5px green;
+    padding: 10px;
+    padding-left: 15px;
+}
+
+.text-div{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.text1{
+    width: 300px;
+    height: 500px;
+    border:1px solid green;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.divi1{
+    width: 300px;
+    height: 500px;
+    border:1px solid green;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.text2{
+    width: 300px;
+    height: 500px;
+    border:1px solid green;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.divi2{
+    width: 300px;
+    height: 500px;
+    border:1px solid green;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
