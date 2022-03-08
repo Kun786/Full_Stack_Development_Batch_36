@@ -1,0 +1,204 @@
+/* Header Css */
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-image: url('../assets/new.jpg');
+    height: 68vh;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    font-size: 20px;
+    flex-wrap: wrap;
+}
+
+.nav>ul{
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+}
+
+.nav>ul>li{
+    list-style: none;
+}
+
+.nav>ul>li:hover{
+    color: #fff;
+    text-shadow:
+    0 0 5px #0ff,
+    0 0 5px #0ff,
+    0 0 5px #0ff,
+    0 0 5px #0ff,
+    0 0 5px #0ff,
+    0 0 5px #0ff,
+    0 0 5px #0ff,
+    0 0 5px #0ff;
+      -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}
+
+.logo{
+    margin-top: 15px;
+}
+
+.nav>ul>li:nth-child(5)>button{
+    background-color: transparent;
+    border: 1px solid green;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+}
+
+.nav>ul>li:nth-child(5)>button:hover{
+    background-color: white;
+    color: green;
+}
+
+.break{
+    flex-basis: 100%;
+    height: 0;
+}
+
+.heading>h1{
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.heading>button{
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    width: 350px;
+}
+
+.heading>button:hover{
+    background-color: white;
+    color: green;
+}
+
+/* Header Css */
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards>.div1{
+ border: 1px solid black;
+ height: 400px;
+ width: 250px;
+ box-shadow: 5px 5px black;
+
+}
+
+.cards>.div2{
+    border: 1px solid black;
+ height: 400px;
+ width: 250px;
+ box-shadow: 5px 5px black;
+}
+
+.cards>.div3{
+    border: 1px solid black;
+ height: 400px;
+ width: 250px;
+ box-shadow: 5px 5px black;
+}
+
+.cards>.div1>h1{
+    text-align: center;
+    color: darkgreen;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cards>.div1>p{
+    word-wrap: break-word;
+    margin-left: 15px;
+}
+
+.cards>.div1>button{
+    margin-left: 50px;
+    width: 150px;
+    height: 50px;
+    border: 1px solid blue;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.cards>.div1>button:hover{
+    background-color: blue;
+    color: white;
+}
+
+.image-text{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.image-text>.divi1{
+    height: 400px;
+    width: 500px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.image-text>.divi2{
+    height: 400px;
+    width: 500px;
+    margin-top: 10px;
+    background-image: url('../assets/photo-1502134249126-9f3755a50d78.jpeg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.footer{
+    background-color: black;
+    width: 100%;
+    height: 200px;
+    color: white;
+    display: flex;
+}
+
+.footer>.div1{
+    border: 1px solid white;
+    height: 100%;
+    width: 300px;
+}
+
+.footer>.div2{
+    border: 1px solid white;
+    height: 100%;
+    width: 300px;
+    flex-grow: 5;
+}
+
+.footer>.div3{
+    border: 1px solid white;
+    height: 100%;
+    width: 300px;
+}
+
+ul li {
+    list-style: none;
+}
+
+a:visited{
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+i{
+    color: green;
+}

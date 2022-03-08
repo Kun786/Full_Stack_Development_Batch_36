@@ -1,0 +1,233 @@
+/* Header Css */
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-image: url('../assets/new.jpg');
+    height: 68vh;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    font-size: 20px;
+    flex-wrap: wrap;
+}
+
+.nav>ul{
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+}
+
+.nav>ul>li{
+    list-style: none;
+}
+
+.nav>ul>li:hover{
+    color: #fff;
+    text-shadow:
+    0 0 5px #0ff,
+    0 0 5px #0ff,
+    0 0 5px #0ff,
+    0 0 5px #0ff,
+    0 0 5px #0ff,
+    0 0 5px #0ff,
+    0 0 5px #0ff,
+    0 0 5px #0ff;
+      -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}
+
+.logo{
+    margin-top: 15px;
+}
+
+.nav>ul>li:nth-child(5)>button{
+    background-color: transparent;
+    border: 1px solid green;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+}
+
+.nav>ul>li:nth-child(5)>button:hover{
+    background-color: white;
+    color: green;
+}
+
+.break{
+    flex-basis: 100%;
+    height: 0;
+}
+
+.heading>h1{
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.heading>button{
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    width: 350px;
+}
+
+.heading>button:hover{
+    background-color: white;
+    color: green;
+}
+
+/* Header Css */
+
+a:visited{
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+.map{
+    height: 900px;
+    width: 100%;
+    background-image: url('../assets/34-345509_world-map-black-and-white-hd-wallpapers-download.png');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.whats-app{
+    width: 100%;
+}
+
+.whats-app>form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.whats-app>h1{
+    text-align: center;
+    color: green;
+}
+
+.break{
+    flex-basis: 100%;
+    height: 0;
+}
+
+.whats-app>form>textarea{
+    width: 800px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.whats-app>form>textarea:hover{
+    border: 1px solid skyblue;
+}
+
+.whats-app>form>input{
+    margin-top: 5px;
+    width: 800px;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.whats-app>form>input:hover{
+    border: 1px solid skyblue;
+}
+
+.whats-app>form>button{
+    margin-top: 5px;
+    width: 800px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid lightgreen;
+    background-color: transparent;
+    color: green;
+}
+
+.whats-app>form>button:hover{
+    background-color: lightgreen;
+    color: white;
+}
+
+.email-us>form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.email-us>form>input {
+    margin-top: 5px;
+    width: 800px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.email-us>form>input:hover{
+    border: 1px solid skyblue;
+}
+
+.email-us>form>textarea:hover{
+    border: 1px solid skyblue;
+}
+.email-us>form>textarea{
+    margin-top: 15px;
+    width: 800px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.email-us>form>button{
+    margin-top: 15px;
+    margin-top: 5px;
+    width: 800px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid lightblue;
+    background-color: transparent;
+    color: blue;
+}
+
+.email-us>form>button:hover{
+    background-color: lightblue;
+    color: white;
+}
+
+.footer{
+    background-color: black;
+    width: 100%;
+    height: 200px;
+    color: white;
+    display: flex;
+}
+
+.footer>.div1{
+    border: 1px solid white;
+    height: 100%;
+    width: 300px;
+}
+
+.footer>.div2{
+    border: 1px solid white;
+    height: 100%;
+    width: 300px;
+    flex-grow: 5;
+}
+
+.footer>.div3{
+    border: 1px solid white;
+    height: 100%;
+    width: 300px;
+}
+
+ul li {
+    list-style: none;
+}
