@@ -1,3 +1,6 @@
 https://bootstrap-cheatsheet.themeselection.com/
 
 https://getbootstrap.com/docs/5.0/layout/grid/
+
+.ms-auto shifts it to the right.
+.me-auto shifts it to the right.
