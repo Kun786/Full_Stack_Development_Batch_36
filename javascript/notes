@@ -1,0 +1,6 @@
+var is global scope
+var has function scope as well
+let is block scope
+let cannot redeclare in block scope
+cost cannot redeclare in block scope
+cont array and objects cannot redeclare or reassign but can modifiy its value because pointer is constant but fuction allow to push values
