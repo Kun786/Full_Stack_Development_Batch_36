@@ -26,10 +26,13 @@ const ProcessHumanData = (HumanDetails) => {
 const Table = (TableNuber) => {
 
     for(let i=1;i<=10;i++){
-        console.log(`${TableNuber} x ${i} = ${TableNuber}`)
+        if(i%2 === 0){
+            console.log(i);
+        }
     }
 }
 
+Table();
 //Question No 2
 
 
