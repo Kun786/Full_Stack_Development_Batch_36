@@ -32,6 +32,9 @@ const Table = (TableNuber) => {
     }
 }
 
+
+  2=='2'
+  2==='2'
 Table();
 //Question No 2
 
