@@ -17,7 +17,6 @@ const ProcessHumanData = (HumanDetails) => {
     console.log(Name,Age,Skills,Nationality);
 }
 
-ProcessHumanData(HumanBeing);
 
 //Question No 1
 
@@ -31,6 +30,9 @@ const Table = (TableNuber) => {
     }
 }
 
-Table();
 //Question No 2
+
+
+
+function NormalFunction(){return 100}
 
