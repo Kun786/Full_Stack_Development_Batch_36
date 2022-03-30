@@ -157,15 +157,7 @@ const checkPassCode = (token) => {
     // }else{
     //     console.log('You are not authorized');
     // }
-    if (condition){
-
-    }else if(condition 2){
-
-    }else if(condtion 3){
-
-    }else{
-        
-    }
+ 
 }
 
 checkPassCode(2);
