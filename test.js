@@ -24,17 +24,19 @@ const ProcessHumanData = (HumanDetails) => {
 //Question No 2
 
 const Table = (TableNuber) => {
-
-    for(let i=1;i<=10;i++){
-        if(i%2 === 0){
-            console.log(i);
-        }
-    }
+    let a = [1,2,3,4,5,6,7,8,9,10];
+    // for(let i=1;i<=10;i++){
+    //     if(i%2 === 0){
+    //         console.log(i);
+    //     }
+    // }
+    const NewArray = a.filter(key => {
+         key%2==0
+    })
+    console.log(`Hi+${NewArray}`);
 }
 
 
-  2=='2'
-  2==='2'
 Table();
 //Question No 2
 
@@ -46,12 +48,19 @@ function NormalFunction(){return 100}
 
 //Swaping two Strings without third variable
 const Swap = () =>{
-    let a = 'hi';
-    let b = 'Hello';
-    [a,b]=[b,a]; // Yahan main Es6 ka feature Destructuring Assignment Array Matching Use kar raha hoon
+    // let a = 8;
+    // let b = 12;
+    // [a,b]=[b,a]; // Yahan main Es6 ka feature Destructuring Assignment Array Matching Use kar raha hoon
+    // console.log(a,b);
+    let a = 8;
+    let b = 10;
+    let tempo;
+    tempo = a; // tempo value 8
+    a = b; // a value 10
+    b = tempo;
     console.log(a,b);
 }
-// Swap();
+Swap();
 //Swaping two Strings without third variable
 
 // Reverse a String Using Recursion
@@ -79,6 +88,7 @@ SwapIntegers();
 
 //Nth LArgest Element in Array
 const largestElements = (numbers) => {
+    
     let largest = 0;
     for (let i = 0; i < numbers.length; i++) {
         let elements = numbers[i];
@@ -110,3 +120,52 @@ const check = async (req, res) => {
         return error;
     })
 }
+
+
+
+
+
+const Bind = () => {
+    // let Email = EmailFromInput;
+    // let Password = PasswordFromInput;
+
+    // let UserObject = {
+    //     Email:Email,
+    //     Password:Password
+    // }
+    // let Users = []
+    // Users.push(UserObject);
+
+    // now send this data to backend
+
+}
+
+
+
+// let a, b, rest;
+// [a, b] = [10, 20];
+
+// console.log(a);
+
+
+
+const checkPassCode = (token) => {
+    // if(token === 'yes'){
+    //     console.log('Please Enter');
+    // }else if(token === null){
+    //     console.log('Please provide an argument');
+    // }else{
+    //     console.log('You are not authorized');
+    // }
+    if (condition){
+
+    }else if(condition 2){
+
+    }else if(condtion 3){
+
+    }else{
+        
+    }
+}
+
+checkPassCode(2);
