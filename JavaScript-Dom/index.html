@@ -19,6 +19,22 @@
         
     </div>
     <button onclick="ChangeImage()">Change Image</button>
+
+    <form onsubmit="Submit(); return false">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="text" class="form-control email" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="text" class="form-control password" id="exampleInputPassword1">
+      </div>
+      <button type="submit" class="btn btn-primary" >Submit</button>
+    </form>
+
+    <div class="result">
+
+    </div>
 </body>
 <script src="index.js" ></script>
 </html>

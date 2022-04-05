@@ -1,4 +1,8 @@
 
+
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
+
 let ABC = () => {
     try {
         
@@ -34,7 +38,32 @@ let Object = {
 //     console.log(`${properties}: ${Object[properties]}`);
 // }
 
-AllElements.forEach((elements) => {
-    console.log(elements.innerHTML)
-})
-console.log(AllElements[2]);
+// let NewArray = Array.from(AllElements);
+// console.log(NewArray);
+// AllElements.forEach((elements) => {
+//     console.log(elements.innerHTML)
+// })
+// console.log(AllElements[2]);
+
+const h1 = $('h1');
+// console.log(h1.innerHTML);
+
+const body = document.body;
+// console.log(body);
+
+
+let Submit = () => {
+    try {
+        let Email = document.querySelector('.email');
+        let Password = document.querySelector('.password');
+        let ShowResult = document.querySelector('.result');
+        let Result = Email.value + Password.value;
+        let CreateElement = document.createElement('h1');
+        let CreateElementNode = document.createTextNode(Result);
+
+        CreateElement.appendChild(CreateElementNode);
+        ShowResult.appendChild(CreateElement);
+    } catch (error) {
+        alert(error.message);
+    }
+}
