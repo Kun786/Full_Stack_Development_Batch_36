@@ -23,3 +23,18 @@ let ChangeImage = () => {
         alert(error);
     }
 }
+
+let AllElements = document.querySelectorAll('h1');
+let Object = {
+    Name:'abc',
+    Age:8
+}
+// console.log(typeof(AllElements));
+// for ( let properties in Object ) {
+//     console.log(`${properties}: ${Object[properties]}`);
+// }
+
+AllElements.forEach((elements) => {
+    console.log(elements.innerHTML)
+})
+console.log(AllElements[2]);
