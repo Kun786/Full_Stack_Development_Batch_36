@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Coffee Application</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <H1 class="text-center">Welcome</H1>
+        </div>
+       <form onsubmit="CalculateThePrice(); return false">
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-outline-light w-100" onclick="GetButton1value()">Coffee 1
+                   <br> <p class="text-center value1" value="100" >100 pkr</p>
+                </button>
+                
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-light w-100" onclick="GetButton2value()">Coffee 2
+                    <br> <span class="text-center value2">120 pkr</span>
+                </button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-light w-100" onclick="GetButton3value()">Coffee 3
+                    <br> <span class="text-center value3">150 pkr</span>
+                </button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-light w-100" onclick="GetButton4value()">Coffee 4
+                    <br> <span class="text-center value4">200 pkr</span>
+                </button>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+                <input type="text" name="" id="" class="form-control one" placeholder="" readonly>
+            </div>
+            <div class="col">
+                <input type="text" name="" id="" class="form-control two" placeholder="" readonly>
+            </div>
+            <div class="col">
+                <input type="text" name="" id="" class="form-control three" placeholder="" readonly>
+            </div>
+            <div class="col">
+                <input type="text" name="" id="" class="form-control four" placeholder="" readonly>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <button class="w-100 btn btn-outline-light" type="submit">Calculate</button>
+        </div>
+       </form>
+    </div>
+    <div class="Result"></div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="./js/CoffeeAppManagementController.js"></script>
+
+</html>
