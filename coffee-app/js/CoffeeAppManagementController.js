@@ -5,6 +5,10 @@ let Value2 = 0;
 let Value3 = 0;
 let Value4 = 0;
 let Result = 0;
+let Quantity1 = 1;
+let Quantity2 = 1;
+let Quantity3 = 1;
+let Quantity4 = 1;
 
 
 let GetButton1value = () => {
@@ -12,7 +16,8 @@ let GetButton1value = () => {
         let TemporaryValue = parseInt($('.value1').dataset.value);
         Value1 += TemporaryValue;
         let GetInput = $('.one');
-        GetInput.placeholder = Value1
+        GetInput.placeholder = `${Value1} x ${Quantity1}`;
+        Quantity1++;
     } catch (error) {
         console.log(error.message)
     }
@@ -23,7 +28,8 @@ let GetButton2value = () => {
         let TemporaryValue = parseInt($('.value2').dataset.value);
         Value2 += TemporaryValue;
         let GetInput = $('.two');
-        GetInput.placeholder = Value2
+        GetInput.placeholder = `${Value2} x ${Quantity2}`;
+        Quantity2++;
     } catch (error) {
         console.log(error.message)
     }
@@ -34,7 +40,8 @@ let GetButton3value = () => {
         let TemporaryValue = parseInt($('.value3').dataset.value);
         Value3 += TemporaryValue;
         let GetInput = $('.three');
-        GetInput.placeholder = Value3
+        GetInput.placeholder = `${Value3} x ${Quantity3}`;
+        Quantity3++;
     } catch (error) {
         console.log(error.message)
     }
@@ -45,7 +52,8 @@ let GetButton4value = () => {
         let TemporaryValue = parseInt($('.value4').dataset.value);
         Value4 += TemporaryValue;
         let GetInput = $('.four');
-        GetInput.placeholder = Value4
+        GetInput.placeholder = `${Value4} x ${Quantity4}`;
+        Quantity4++;
     } catch (error) {
         console.log(error.message)
     }
@@ -382,11 +390,9 @@ let CalculateThePrice = () => {
 // }
 
 
-let Go = () => {
-    try {
-        window.location = 'https://www.google.com';
-        // window.location('https://www.google.com')
-    } catch (error) {
-        console.log(error.message)
-    }
+let GoToNewPage = () =>{
+    window.open('../coffee-app/signup-form.html')
 }
+
+
+

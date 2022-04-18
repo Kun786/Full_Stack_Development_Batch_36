@@ -1,5 +1,6 @@
-const { TemplatePage } = require('./TemplatePage');
+import  { TemplatePage } from ('./TemplatePage.js');
 
+console.log(TemplatePage);
 let Quantity = 1;
 let Result = 0;
 
@@ -11,7 +12,7 @@ let GetValue = () => {
 
         Result += Value;
         document.querySelector('span').innerHTML = `Quantity ${Quantity}`;
-        document.querySelector('.Result').innerHTML = TemplatePage;
+        document.querySelector('.Result').innerHTML = Result;
         Quantity++;
     } catch (error) {
         console.log(error.message);

@@ -113,5 +113,4 @@ hr {
     </div>
 </div>
 `
-
-module.exports = { TemplatePage };
+export { TemplatePage };
