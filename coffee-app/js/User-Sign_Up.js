@@ -1,49 +1,66 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document);
 
-let UserObject  = {
-    Name:String,
-    House:String,
-    Email:String,
-    Phone:Number,
-    Coffee:String   
+let UserObject = {
+    Name: String,
+    House: String,
+    Email: String,
+    Phone: Number,
+    Coffee: String
 }
 
 let SubmitUserDetails = () => {
     try {
+        let EmptyArray = [];
         let Name = $('.Name').value;
         let House = $('.House').value;
         let Email = $('.Email').value;
         let Phone = $('.Phone').value;
         let Coffee = $('.radio').value;
-        let RandomKey = Math.random().toString(12).substring(1);
-        console.log(typeof(RandomKey));
+
         UserObject.Name = Name;
         UserObject.House = House;
         UserObject.Email = Email;
         UserObject.Phone = Phone;
         UserObject.Coffee = Coffee;
-        UserObject.Token = RandomKey;
+       
 
-        // Database.Document.save(UserObject)
-        localStorage.setItem('user-object',JSON.stringify(UserObject));
         
+        
+
+        let GetData = JSON.parse(localStorage.getItem('user-object'));
+       
+        if (GetData === null) {
+            EmptyArray.push(UserObject);
+            localStorage.setItem('user-object', JSON.stringify(EmptyArray));
+        } else {
+            EmptyArray.push(UserObject);
+           let Data =  GetData.forEach((Object) => {
+                console.log('yes');
+                console.log(Object);
+                EmptyArray.push(Object);
+            })
+            localStorage.setItem('user-object', JSON.stringify(EmptyArray));
+        }
+        // Database.Document.save(UserObject)
+        // localStorage.setItem('user-object',JSON.stringify(GetData));
+
     } catch (error) {
-        console.log(error.message);
+        console.log(error);
     }
 }
 
-let GetData = JSON.parse(localStorage.getItem('user-object'));
-let Result  = $('.Result');
-Result.innerHTML = `
-<h1>
-Name:${GetData.Name}<br>
-Email:${GetData.Email}<br>
-House:${GetData.House}<br>
-AccessCard:${GetData.Token}<br>
+// let GetData = JSON.parse(localStorage.getItem('user-object'));
+// let Result  = $('.Result');
+// Result.innerHTML = `
+// <h1>
+// Name:${GetData.Name}<br>
+// Email:${GetData.Email}<br>
+// House:${GetData.House}<br>
+// AccessCard:${GetData.Token}<br>
 
-</h1>
-`
+// </h1>
+// `
 
 
 // {
@@ -61,17 +78,17 @@ let SplitString = () => {
     try {
         let String = "Bearer 98182hedub197h12e9u88dh1297ey87g87";
         let SplitString = String.split(" ");
-        let RealToken =SplitString[1];
+        let RealToken = SplitString[1];
         console.log(RealToken);
         console.log(SplitString);
     } catch (error) {
         console.log(error.message);
     }
-} 
+}
 
 let RandomTokenGenerator = () => {
     try {
-        let Random = (Math.random())*100;
+        let Random = (Math.random()) * 100;
         let RandomWhole = Math.floor(Random);
         // let RealToken = Random.toString().split('.');
         // console.log(RealToken);
@@ -94,3 +111,5 @@ let SubString = () => {
         console.log(error.message);
     }
 }
+
+
