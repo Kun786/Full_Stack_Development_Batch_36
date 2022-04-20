@@ -391,7 +391,7 @@ let CalculateThePrice = () => {
 
 
 let GoToNewPage = () =>{
-    window.open('../coffee-app/signup-form.html')
+    window.open('signup-form.html')
 }
 
 
