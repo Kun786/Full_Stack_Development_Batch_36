@@ -17,12 +17,14 @@ let SubmitUserDetails = () => {
         let Email = $('.Email').value;
         let Phone = $('.Phone').value;
         let Coffee = $('.radio').value;
+        let Password = $('.password').value;
 
         UserObject.Name = Name;
         UserObject.House = House;
         UserObject.Email = Email;
         UserObject.Phone = Phone;
         UserObject.Coffee = Coffee;
+        UserObject.Password = Password;
        
 
         
