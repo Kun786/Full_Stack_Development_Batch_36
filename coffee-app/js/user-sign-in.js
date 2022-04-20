@@ -18,10 +18,13 @@ let SignInUser = () => {
             // yar yahan check karo agar to input say email aa raha hai agar to wo object k email say mill jae
             // to kaya user-dashboard pay janay do warna alert kro incorrect email
             if(Objects.Email === Email){
-                window.open('user-dashboard.html')
-            }else{
-                alert('Unauthorized !!!');
+                window.open('user-dashboard.html');
+                return
             }
+            if(Objects.Email !== Email){
+                alert('Unauthorized !!!');
+                return
+            }   
 
         });
     } catch (error) {
