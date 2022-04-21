@@ -13,11 +13,11 @@ let SignInUser = () => {
         let UserDataMethod2 = localStorage.getItem('user-object');
         let ParsedData = JSON.parse(UserDataMethod2);
         
-        ParsedData.forEach(Objects => {
+        ParsedData.some(Objects => {
             
             // yar yahan check karo agar to input say email aa raha hai agar to wo object k email say mill jae
             // to kaya user-dashboard pay janay do warna alert kro incorrect email
-            if(Objects.Email === Email && Objects.Password === Password){
+            if(Objects.Email === Email){
                 console.log(Email);
                 window.open('user-dashboard.html');
             }
