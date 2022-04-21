@@ -1,4 +1,5 @@
 let UserData = JSON.parse(localStorage.getItem('user-object'));
+let TotalUserLength = 0;
 
 UserData.forEach((element, i) => {
     let DivToShow = document.querySelector('.table-data');
@@ -12,4 +13,9 @@ UserData.forEach((element, i) => {
     <td>${element.Phone}</td>
     </tr>
     `
+   
+    TotalUserLength = (i+1);
 });
+
+let TotalUsers = document.querySelector('.TotalUsers');
+TotalUsers.innerHTML = `${TotalUserLength}`
