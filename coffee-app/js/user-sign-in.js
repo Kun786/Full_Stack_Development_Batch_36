@@ -23,7 +23,7 @@ let SignInUser = () => {
                 return
             }
             if(Objects.Email !== Email){
-                onsole.log(Email);
+                console.log(Email);
                 alert('Unauthorized !!!');
                 return
             }   
