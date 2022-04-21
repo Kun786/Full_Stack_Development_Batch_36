@@ -19,7 +19,7 @@ let SignInUser = () => {
             // to kaya user-dashboard pay janay do warna alert kro incorrect email
             if(Objects.Email === Email){
                 console.log(Email);
-                window.open('user-dashboard.html');
+                window.open('user-dashboard.html',"_self");
             }
             if(Objects.Email !== Email){
                 console.log(Email);
