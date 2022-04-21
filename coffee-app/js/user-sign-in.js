@@ -20,14 +20,11 @@ let SignInUser = () => {
             if(Objects.Email === Email && Objects.Password === Password){
                 console.log(Email);
                 window.open('user-dashboard.html');
-                return
             }
             if(Objects.Email !== Email){
                 console.log(Email);
-                alert('Unauthorized !!!');
-                return
             }   
-
+            return
         });
     } catch (error) {
         console.log(error.message);
