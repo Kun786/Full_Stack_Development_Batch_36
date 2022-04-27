@@ -11,6 +11,7 @@ UserData.forEach((element, i) => {
     <td>${element.Coffee}</td>
     <td>${element.House}</td>
     <td>${element.Phone}</td>
+    <td><button class="btn btn-outline-danger" onclick="DeleteUser('${element.Email}')">Delete</button></td>
     </tr>
     `
    
@@ -25,3 +26,10 @@ TotalUsers.innerHTML = `${TotalUserLength}`
 // NumberArray.forEach(ele => {
 //     console.log(ele)
 // })
+
+let DeleteUser = (UserEmail) => {
+    let NewUserData = UserData.filter((Object) => {
+        return !(UserEmail===Object.Email)
+    } );
+    localStorage.setItem('user-object',JSON.stringify(NewUserData));
+}
