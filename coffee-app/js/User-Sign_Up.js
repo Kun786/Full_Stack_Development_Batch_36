@@ -16,15 +16,19 @@ let SubmitUserDetails = () => {
         let House = $('.House').value;
         let Email = $('.Email').value;
         let Phone = $('.Phone').value;
-        let Coffee = $('.radio').value;
+        let Coffee = document.querySelector('.radio:checked').value; // input[name="flexRadioDefault"]
         let Password = $('.password').value;
 
+        
+
+        
         UserObject.Name = Name;
         UserObject.House = House;
         UserObject.Email = Email;
         UserObject.Phone = Phone;
         UserObject.Coffee = Coffee;
         UserObject.Password = Password;
+        
        
 
         
@@ -46,9 +50,10 @@ let SubmitUserDetails = () => {
         }
         // Database.Document.save(UserObject)
         // localStorage.setItem('user-object',JSON.stringify(GetData));
-
+        alert('Sign-Up Successfuly')
     } catch (error) {
         console.log(error);
+        alert(error.message);
     }
 }
 

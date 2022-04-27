@@ -103,7 +103,7 @@
                 <div class="card px-5 py-5"> <span class="circle"><i class="fa fa-check"></i></span>
                     <h5 class="mt-3">Join over 25 million <br> Customer from around the Globe</h5>
                     <h4 class="text-center text-info"> SignUp </h4>
-                    <form onsubmit="SubmitUserDetails(); return false">
+                    <form id="MyForm" onsubmit="SubmitUserDetails(); return false">
                       <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Name</label>
                         <input type="text" class="form-control Name"  aria-describedby="emailHelp">
@@ -119,6 +119,10 @@
                       <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Phone Number</label>
                         <input type="number" class="form-control Phone"  aria-describedby="emailHelp">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Password</label>
+                        <input type="password" class="form-control password"  aria-describedby="emailHelp">
                       </div>
                       <div class="form-check">
                         <input class="form-check-input radio" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="abc">

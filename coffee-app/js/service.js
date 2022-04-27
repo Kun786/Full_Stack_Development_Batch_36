@@ -1,4 +1,4 @@
-let UserData = JSON.parse(localStorage.getItem('user-object'));
+let UserData = JSON.parse(localStorage.getItem('user-object'));// Array local-storagr [objs]
 let TotalUserLength = 0;
 
 UserData.forEach((element, i) => {
@@ -19,3 +19,9 @@ UserData.forEach((element, i) => {
 
 let TotalUsers = document.querySelector('.TotalUsers');
 TotalUsers.innerHTML = `${TotalUserLength}`
+
+// NumberArray = [1,2,4,5,6,7]
+
+// NumberArray.forEach(ele => {
+//     console.log(ele)
+// })
