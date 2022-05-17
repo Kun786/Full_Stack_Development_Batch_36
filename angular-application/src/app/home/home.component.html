@@ -94,3 +94,20 @@
 		</div>
 	</div>
 </div>
+
+<table class="table">
+  <thead>
+	<tr>
+	  <th scope="col">Name</th>
+	  <th scope="col">En]mail</th>
+	  <th scope="col">Status</th>
+	</tr>
+  </thead>
+  <tbody>
+	<tr *ngFor="let _Data of Data">
+	  <th [ngClass]="_Data.Status === 0 ? 'text-danger':'text-success'">{{_Data.Name}}</th>
+	  <td [ngClass]="_Data.Status === 0 ? 'text-danger':'text-success'">{{_Data.Email}}</td>
+	  <td>{{_Data.Status}}</td>
+	</tr>
+  </tbody>
+</table>
