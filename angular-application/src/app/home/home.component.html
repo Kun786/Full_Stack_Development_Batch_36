@@ -95,7 +95,9 @@
 	</div>
 </div>
 
-<table class="table">
+
+
+<!-- <table class="table">
   <thead>
 	<tr>
 	  <th scope="col">Name</th>
@@ -104,10 +106,32 @@
 	</tr>
   </thead>
   <tbody>
-	<tr *ngFor="let _Data of Data">
+	<tr *ngFor="let _Data of NewData">
 	  <th [ngClass]="_Data.Status === 0 ? 'text-danger':'text-success'">{{_Data.Name}}</th>
 	  <td [ngClass]="_Data.Status === 0 ? 'text-danger':'text-success'">{{_Data.Email}}</td>
 	  <td>{{_Data.Status}}</td>
 	</tr>
   </tbody>
+</table> -->
+{{Name}}
+<table class="table">
+	<thead>
+		<tr>
+		  <th scope="col">Name</th>
+		  <th scope="col">En]mail</th>
+		  <th scope="col">Status</th>
+		  <th scope="col">Testing</th>
+
+		</tr>
+	  </thead>
+	  <tbody>
+		  <tr *ngFor="let _Data of Data">
+			  <ng-container>
+				<td class="text-primary" [ngClass]="_Data.Status === 0 ? 'text-danger':''">{{_Data.Name}}</td>
+				<td class="text-primary" [ngClass]="_Data.Status === 0 ? 'text-danger':''">{{_Data.Email}}</td>
+				<td class="text-primary" [ngClass]="_Data.Status === 0 ? 'text-danger':''">{{_Data.Status}}</td>
+				<td ><input class="border border-success" [ngClass]="_Data.Status === 1 ? 'bg-success' : 'bg-danger'" type="text" [placeholder]="_Data.Name"></td>
+			  </ng-container>
+		  </tr>
+	  </tbody>
 </table>

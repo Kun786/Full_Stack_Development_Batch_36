@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirstServiceService } from '../Shared/Service/first-service.service';
+import { SecondService } from '../Shared/Service/second.service';
 
 @Component({
   selector: 'app-home',
@@ -9,15 +10,21 @@ import { FirstServiceService } from '../Shared/Service/first-service.service';
 export class HomeComponent implements OnInit {
 
   Data:any = [];
-  constructor(private _FirstService:FirstServiceService) { }
+  NewData:any = [];
+  Name = "kjahkhas";
+  constructor(
+    private MyService:SecondService
+    ) { }
 
   ngOnInit(): void {
-    this.GetAllServiceUsers();
+    this.GetAllUsers();
   }
 
-  GetAllServiceUsers(){
-    this.Data = this._FirstService.GetUserData();
+  GetAllUsers(){
+    this.Data = this.MyService.ProvideUserData();
     console.log(this.Data);
   }
+
+  
 
 }
