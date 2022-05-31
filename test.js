@@ -164,3 +164,57 @@ checkPassCode(2);
 
 
 
+
+
+
+// Arrays Functions Functional programming in JavaScript
+
+// push => add value
+
+
+let NewArray = [];
+NewArray.push(10,11,12,{Name:'hi',age:8});
+console.log(NewArray);
+
+NewArray.pop();
+console.log(NewArray);
+
+console.log(typeof(NewArray));
+
+
+let a =10;
+console.log(a);
+let newValue = NewArray.toString();//No Mutate
+console.log(typeof(newValue));
+console.log(NewArray);
+
+let newNumber = 10;
+let newNumber2 = 12;
+
+// let Result = join(newNumber,newNumber2);
+// console.log(Result);
+
+let age = 10
+let ageFun = () => {
+ return HighFucntion
+}
+
+let HighFucntion = (ageFun) =>
+{
+
+}
+
+
+let AnotherArray = [1,2,3,4,5]
+
+let Data = AnotherArray.join('\n');
+// console.log(Data);
+
+const months = ['Jan', 'March', 'April', 'June'];
+months.splice(1, 2, 'Feb','jhj','kjk');
+// inserts at index 1
+console.log(months);
+
+let UIArray = [1,2,8,7,9];
+let newData = UIArray.slice(1,3);
+console.log(newData);
