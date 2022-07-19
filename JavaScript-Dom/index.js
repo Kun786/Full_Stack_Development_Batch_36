@@ -6,9 +6,12 @@ const $$ = document.querySelectorAll.bind(document);
 let ABC = () => {
     try {
         
-        let SelectedObject = document.querySelector('h1');
-        SelectedObject.innerHTML="Hi"
-        SelectedObject.style.border = "1px solid black";
+        let SelectedObject = document.querySelectorAll('h1');
+        
+        SelectedObject.forEach(Element=>{
+            Element.style.border = "1px solid black";
+            Element.innerHTML="Hi"
+        })
         
     } catch (error) {
         alert(error);
@@ -18,9 +21,17 @@ let ABC = () => {
 let ChangeImage = () => {
     try {
         let SelectedObject = document.querySelector('.FirstImage');
-        let Element = document.createElement('h1');
-        let InnerHtml = document.createTextNode('kjashdkjas');
-        Element.appendChild(InnerHtml)
+        // let Element = document.createElement('h1');
+        // let InnerHtml = document.createTextNode('kjashdkjas');
+        // Element.appendChild(InnerHtml)
+        // SelectedObject.appendChild(Element);
+
+        let Element = document.createElement('ul');
+        let InnerHtml = document.createElement('li');
+        let data = document.createTextNode('Hi');
+
+        InnerHtml.appendChild(data);
+        Element.appendChild(InnerHtml);
         SelectedObject.appendChild(Element);
 
     } catch (error) {
@@ -28,11 +39,11 @@ let ChangeImage = () => {
     }
 }
 
-let AllElements = document.querySelectorAll('h1');
-let Object = {
-    Name:'abc',
-    Age:8
-}
+// let AllElements = document.querySelectorAll('h1');
+// let Object = {
+//     Name:'abc',
+//     Age:8
+// }
 // console.log(typeof(AllElements));
 // for ( let properties in Object ) {
 //     console.log(`${properties}: ${Object[properties]}`);
@@ -65,5 +76,13 @@ let Submit = () => {
         ShowResult.appendChild(CreateElement);
     } catch (error) {
         alert(error.message);
+    }
+}
+
+let Valid = (data) => {
+    try {
+        console.log(data)
+    } catch (error) {
+        console.log(error.message)
     }
 }
