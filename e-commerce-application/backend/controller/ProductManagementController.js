@@ -1,11 +1,18 @@
-
-const ProductData = (req, res) => {
+const ProductModel = require('../models/ProductManagementModel')
+const ProductData = async(req, res) => {
     try {
-        console.log(req.body);
+        const { ProductName, ProductPrice } = req.body;
+        
+        const DocToCreate = new ProductModel({
+            ProductName,
+            ProductPrice
+        })
+
+        const DocToSave = await DocToCreate.save();
         //Hey Please Save this Data to My DataBase //IOBlocking await
         res.json({
             Message:'You Have Reached the Api End Point',
-            Body:req.body
+            Body:DocToSave
         })
     } catch (error) {
         res.json({
