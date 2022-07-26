@@ -18,7 +18,7 @@ const ProductSchema = mongoose.Schema({
         type: String,
         default: `${year}-${month}-${day}-${time}`,
     }
-})
+},{timeStamp:true})
 
 
 //Exporting The Schema
