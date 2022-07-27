@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const ResponseOfMyDataBase = require('./configuration/DataBaseConfiguration');
+const crypto = require('crypto'); 
 //Block End Dependencies
 
 
@@ -13,6 +14,7 @@ app.use(express.json());
 app.use(express.text());
 app.use(express.raw());
 app.use(cors());
+app.use('/assets',express.static('assets'));
 const PORT = process.env.PORT || 1234;
 //Block End Intialize the app
 
