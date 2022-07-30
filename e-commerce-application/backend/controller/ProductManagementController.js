@@ -8,7 +8,7 @@ const ProductData = async (req, res) => {
         const DocToCreate = new ProductModel({
             ProductName,
             ProductPrice,
-            ImageUrl: req.file.filename,
+            ImageUrl: `/assets/Product/${req.file.filename}`,
             ImageName: req.file.originalname,
             ImageMimeType: req.file.mimetype,
         })
