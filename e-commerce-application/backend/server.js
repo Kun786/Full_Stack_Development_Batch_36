@@ -36,9 +36,11 @@ app.all('*', (req, res, next) => {
 //Start Block Accessing The Routes in the Entry Point
 
 const _ProductManagementRoute = require('./routes/ProductManagementRoute');
+const _AdminManagementRoute = require('./routes/AdminManagementRoute');
 
 //*****UsingRoutes*****//
 app.use('/ProductManagement',_ProductManagementRoute);
+app.use('/AdminManagement',_AdminManagementRoute);
 //*****UsingRoutes*****//
 
 
@@ -72,6 +74,7 @@ app.use((error, req, res, next) => {
 //Start Block For Listening Your App On Defined Port
 app.listen(PORT, () => {
     console.log(`You Application has Launched from the Port 🚀 🚀 ${PORT}`);
+    console.log(process.env.SALT_ROUND);
 })
 
 

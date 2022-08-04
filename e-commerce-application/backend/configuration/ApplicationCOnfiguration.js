@@ -12,5 +12,3 @@ if(process.env.NODE_ENV === 'development'){
 if(process.env.NODE_ENV === 'production'){
      MyEnviorment = dotenv.config({path:`${__dirname}/../Application-Configuration-Prod.env`});
 }
-
-console.log(MyEnviorment);

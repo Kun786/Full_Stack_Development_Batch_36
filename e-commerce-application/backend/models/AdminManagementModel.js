@@ -1,7 +1,8 @@
 //Dependencies
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-const SaltRounds = process.env.SALT_ROUND;
+// const SaltRounds = process.env.SALT_ROUND;
+const SaltRounds = 10;
 
 // Date
 const today = new Date();
@@ -12,32 +13,35 @@ const time = today.getTime();
 
 //Start Block Schema Creating
 const AdminRegisterSchema = mongoose.Schema({
-    FirstName: { type: String, required: true},
-    LastName: { type: String, required: true},
-    Email: { type: String, required: true, unique:true},
-    Password: { type: String, required: true},
-    SaltString: { type:String },
-    Status: { type:Number, default:1 },
+    FirstName: { type: String, required: true },
+    LastName: { type: String, required: true },
+    Email: { type: String, required: true, unique: true },
+    Password: { type: String, required: true },
+    SaltString: { type: String },
+    Status: { type: Number, default: 1 },
     CreatedDate: {
         type: String,
         default: `${year}-${month}-${day}-${time}`,
     }
-},{timestamps:true})
+}, { timestamps: true })
 
 
 AdminRegisterSchema.pre('save', async function (next) {
     try {
+        console.log('kjashdkjashdkjas');
         const Salt = await bcrypt.genSalt(SaltRounds);
         const HashedPassword = await bcrypt.hash(this.Password, Salt);
         this.Password = HashedPassword;
         this.SaltString = Salt;
         next();
     } catch (error) {
-        return res.json({
-            Message: error.message,
-            Data: false,
-            Result: null
-        })
+        return (
+            {
+                Message: error.message,
+                Data: false,
+                Result: null
+            }
+        )
     }
 });
 
