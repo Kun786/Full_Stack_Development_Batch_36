@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.text());
 app.use(express.raw());
 app.use(cors());
-app.use('/assets',express.static('assets'));
+app.use('/assets', express.static('assets'));
 const PORT = process.env.PORT || 1234;
 //Block End Intialize the app
 
@@ -39,8 +39,8 @@ const _ProductManagementRoute = require('./routes/ProductManagementRoute');
 const _AdminManagementRoute = require('./routes/AdminManagementRoute');
 
 //*****UsingRoutes*****//
-app.use('/ProductManagement',_ProductManagementRoute);
-app.use('/AdminManagement',_AdminManagementRoute);
+app.use('/ProductManagement', _ProductManagementRoute);
+app.use('/AdminManagement', _AdminManagementRoute);
 //*****UsingRoutes*****//
 
 
@@ -79,3 +79,6 @@ app.listen(PORT, () => {
 
 
 //End Block For Listening Your App On Defined Port
+
+
+

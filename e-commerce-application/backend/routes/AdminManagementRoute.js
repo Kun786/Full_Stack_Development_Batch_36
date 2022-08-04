@@ -3,7 +3,7 @@ const Router = express.Router();
 
 
 //Accquiring Middlewares
-
+const { AuthorizeAdmin } = require('../middlewares/AdminAuthorization')
 //Accquiring Middlewares
 
 //Accquiging Controllers
@@ -14,7 +14,7 @@ const {
 //Accquiging Controllers
 
 //Defining Routes
-Router.post('/AdminRegister',AdminRegister);
+Router.post('/AdminRegister',AuthorizeAdmin,AdminRegister);
 Router.post('/AdminLogin',AdminLogin);
 //Defining Routes
 
