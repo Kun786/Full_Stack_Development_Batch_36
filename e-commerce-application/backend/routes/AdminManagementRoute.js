@@ -14,7 +14,7 @@ const {
 //Accquiging Controllers
 
 //Defining Routes
-Router.post('/AdminRegister',AuthorizeAdmin,AdminRegister);
+Router.post('/AdminRegister', AdminRegister);
 Router.post('/AdminLogin',AdminLogin);
 //Defining Routes
 

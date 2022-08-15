@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 // const SaltRounds = process.env.SALT_ROUND;
-const SaltRounds = 10;
+const SaltRounds = parseInt(process.env.SALT_ROUND);
 
 // Date
 const today = new Date();
@@ -28,7 +28,6 @@ const AdminRegisterSchema = mongoose.Schema({
 
 AdminRegisterSchema.pre('save', async function (next) {
     try {
-        console.log('kjashdkjashdkjas');
         const Salt = await bcrypt.genSalt(SaltRounds);
         const HashedPassword = await bcrypt.hash(this.Password, Salt);
         this.Password = HashedPassword;

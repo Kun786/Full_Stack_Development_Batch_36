@@ -37,10 +37,12 @@ app.all('*', (req, res, next) => {
 
 const _ProductManagementRoute = require('./routes/ProductManagementRoute');
 const _AdminManagementRoute = require('./routes/AdminManagementRoute');
+const _PaymentManagement = require('./routes/PaymentManagementRoute');
 
 //*****UsingRoutes*****//
 app.use('/ProductManagement', _ProductManagementRoute);
 app.use('/AdminManagement', _AdminManagementRoute);
+app.use('/PaymentManagement',_PaymentManagement);
 //*****UsingRoutes*****//
 
 
@@ -74,7 +76,7 @@ app.use((error, req, res, next) => {
 //Start Block For Listening Your App On Defined Port
 app.listen(PORT, () => {
     console.log(`You Application has Launched from the Port 🚀 🚀 ${PORT}`);
-    console.log(process.env.SALT_ROUND);
+    console.log(process.env.STRIPE_DEVELOPMENT_KEY);
 })
 
 
