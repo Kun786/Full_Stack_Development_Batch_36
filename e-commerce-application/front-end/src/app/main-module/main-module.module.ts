@@ -13,6 +13,7 @@ import { CheckOutComponent } from './main-components/check-out/check-out.compone
 import { EditCartComponent } from './main-components/edit-cart/edit-cart.component';
 import { PurcahseSuccessfulComponent } from './main-components/purcahse-successful/purcahse-successful.component';
 import { PurcahseFailedComponent } from './main-components/purcahse-failed/purcahse-failed.component';
+import { HomeComponent } from './main-components/home/home.component';
 
 
 @NgModule({
@@ -27,11 +28,12 @@ import { PurcahseFailedComponent } from './main-components/purcahse-failed/purca
     CheckOutComponent,
     EditCartComponent,
     PurcahseSuccessfulComponent,
-    PurcahseFailedComponent
+    PurcahseFailedComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,
-    MainModuleRoutingModule
+    MainModuleRoutingModule,
   ]
 })
 export class MainModuleModule { }

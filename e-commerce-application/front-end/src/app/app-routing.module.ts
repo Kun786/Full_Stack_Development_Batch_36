@@ -11,8 +11,13 @@ const routes: Routes = [
      loadChildren: () => import('./main-module/main-module.module').then(m => m.MainModuleModule) 
     },
 { 
-  path: 'AdminModule', 
+  path: 'admin', 
   loadChildren: () => import('./admin-module/admin-module.module').then(m => m.AdminModuleModule) 
+},
+  
+{ 
+  path: 'ManagementModule', 
+  loadChildren: () => import('./management-module/management-module.module').then(m => m.ManagementModuleModule) 
 }
 ];
 
