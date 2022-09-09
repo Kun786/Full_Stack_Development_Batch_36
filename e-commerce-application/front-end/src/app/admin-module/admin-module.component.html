@@ -1,71 +1,91 @@
-<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" >Skillstitute</a>
-    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <ul class="navbar-nav px-3">
-      <li class="nav-item text-nowrap">
-        <a class="nav-link" [routerLink]="['']" routerLinkActive="router-link-active" > <i class="fas fa-power-off"></i> Sign out</a>
-      </li>
-    </ul>
-  </header>
-  
-  <div class="container-fluid">
-    <div class="row">
-      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-        <div class="position-sticky pt-3">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" routerLink="./dash-board" routerLinkActive="router-link-active" >
-                <span data-feather="home"></span><i class="fab fa-uncharted"></i>
-                Dashboard
-              </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" routerLink="./products" routerLinkActive="router-link-active" >
-                  <span data-feather="home"></span><i class="fab fa-uncharted"></i>
-                  Products
-                </a>
-              </li>
-          </ul>
-  
-          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>Saved reports</span>
-            <a class="link-secondary"  aria-label="Add a new report">
-              <span data-feather="plus-circle"></span>
-            </a>
-          </h6>
-          <ul class="nav flex-column mb-2">
-            <li class="nav-item">
-              <a class="nav-link" >
-                <span data-feather="file-text"></span>
-                Current month
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" >
-                <span data-feather="file-text"></span>
-                Last quarter
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" >
-                <span data-feather="file-text"></span>
-                Social engagement
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" >
-                <span data-feather="file-text"></span>
-                Year-end sale
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-  
-      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <router-outlet></router-outlet> 
-      </main>
+<div class="container">
+  <div class="row">
+   <div class="col-md-3">
+    <div class="txt text-center">
+     <h3>Welcome To Create Product</h3>
+     <h4>You can create your product card and can live on your pages </h4>
+    <button type="button" class="btn btn-outline-dark w-50 text-white mt-3">Create Product</button>
     </div>
+   </div>
+   <div class="col-md-9">
+     <div class="wrapper">
+     <form (ngSubmit)="submitProductForm()" [formGroup]="myProductForm" >
+       <div class="row mt-5">
+        
+     <div class="col">
+    
+       <div class="form-floating mb-3">
+           <input type="text" class="form-control input" id="floatingInput" placeholder="Product Name" formControlName="productName">
+           <label for="floatingInput">Product Name</label>
+         </div>
+         <div class="form-floating mb-3">
+           <input type="number" class="form-control input" id="floatingPassword" placeholder="Product Price" formControlName="price">
+           <label for="floatingPassword">Product-Price</label>
+         </div>
+         <div class="mb-3">
+           <label class="tag"> Select-Color </label>
+         <select name="selectColor" class="form-control selectColor" id="" placeholder="selectColor" formControlName="color">
+           <option *ngFor="let item of color">{{item}}</option>
+         </select>
+       </div> 
+ 
+   </div>
+   <div class="col">
+       <div class="form-floating mb-3">
+           <input type="number" class="form-control input" id="floatingInput" placeholder="Product Quantity" formControlName="quantity">
+           <label for="floatingInput">Product-Quantity</label>
+         </div>
+         <div class="form-floating mb-3">
+           <input type="text" class="form-control input" id="floatingPassword" placeholder="Company-Name" formControlName="companyName">
+           <label for="floatingPassword">Company-Name</label>
+         </div>
+ 
+         
+          <label for="" class="tag">Select Size</label>
+         <div class="mb-3">
+           <ng-container *ngFor="let item of selectSize" >
+           <input type="checkbox" class="form-check-input" [value]="item" [id]="item" (click)="getSize($event)"/>
+           <label class="form-check-label mx-2" [for]="item">
+             {{item}}
+           </label>
+         </ng-container>
+         </div>
+           
+ 
+   </div>
+ 
+ </div>
+ <div class="row">
+     <div class="col">
+       <textarea name="" class="mt-2" id="" cols="30" rows="10" formControlName="description"></textarea>
+     </div>
+ </div>
+ <div class="row">
+   <div class="col">
+ 
+ <div class="mb-3">
+   <label for="formFile" class="form-label tag">Select Images</label>
+   <input class="form-control input" type="file" id="formFile" formControlName="image" multiple (change)="getImages($event)" >
+ </div>
+ 
+   </div>
+   <div class="col">
+     <label for="" class="tag mb-2">Select Categories</label>
+     <select class="form-select input" formControlName="category">
+       <option *ngFor="let data of categories" [value]="data">{{data}}</option>
+     </select>
+   </div>
+ </div>
+ <div class="row">
+   <button type="submit" class="btn button" [ngStyle]="{'border-color': disableButtonTrue ? 'red' : 'black'}"  [disabled]="disableButtonTrue" >Submit</button>
+ </div>
+ </form>
+ 
+ 
+ 
+     </div>
+   </div>
+ 
   </div>
+ </div>
+ 
