@@ -1,0 +1,107 @@
+<header class="navbar navbar-dark sticky-top  flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 x"><img src="../../assets/Images/blkops1-logo.png" alt="" height="40px" srcset=""> E-commerce</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  <h2 class="heading text-white">Welcome To Admin-Panel </h2>
+  <div class="navbar-nav">
+    <ul class="nav">
+      <li class="nav-item">
+        <button class="btn btn-outline-light me-3"><i class="fa fa-power-off" routerLink=""></i></button>
+      </li>
+      
+    </ul>
+    
+  </div>
+  
+</header>
+
+<div class="container-fluid">
+  <div class="row">
+     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse "> 
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="./dash-board">
+              <span data-feather="home"></span>
+              <i class="fa-solid fa-gauge-high me-2"></i> Dashboard
+              <hr>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">
+              <span data-feather="file"></span>
+              <i class="fa-solid fa-list me-2"></i> User-List
+              <hr>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="./products">
+              <span data-feather="shopping-cart"></span>
+              <i class="fa-solid fa-cart-arrow-down me-2"></i>Create-Products
+             <hr>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">
+              <span data-feather="shopping-cart"></span>
+              <i class="fa-solid fa-chart-simple me-2"></i>Product-Analytics
+             <hr>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" >
+              <span data-feather="users"></span>
+              <i class="fa-solid fa-users me-2"></i> Customers
+              <hr>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" >
+              <span data-feather="bar-chart-2"></span>
+              <i class="fa-solid fa-chart-line me-2"></i> Reports
+              <hr>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" >
+              <span data-feather="layers"></span>
+              <i class="fa-solid fa-gears me-2"></i> Integrations
+              <hr>
+            </a>
+          </li>
+        </ul>
+
+        <h6 class="sidebar-heading mb-5 text-white d-flex justify-content-between align-items-center px-3 mt-4 mb-1">
+          <span>Saved reports</span>
+          <a class="link-secondary"  aria-label="Add a new report">
+            <span data-feather="plus-circle"></span>
+          </a>
+        </h6>
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" >
+              <span data-feather="file-text"></span>
+              Current month
+              <hr>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" >
+              <span data-feather="file-text"></span>
+              Last quarter
+              <hr>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav> 
+
+     <!-- Responsive Side Bar -->
+
+
+    <main class="col-md-9 box ms-sm-auto col-lg-10 px-md-4">
+     <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
