@@ -5,8 +5,6 @@ const ProductData = async (req, res) => {
         const { productName, quantity, price, description, color, companyName, category, size, productMaterial } =req.body;
         let ImageDetaisl = [];
         let Size = size.split(',');
-        size;
-        return
         req.files.forEach(arrayObject => {
             const { filename, originalname, mimetype } = arrayObject;
             ImageDetaisl.push({
@@ -27,7 +25,6 @@ const ProductData = async (req, res) => {
             Data:true
         })
     } catch (error) {
-        console.log(error)
         res.json({
             Message: error.mesage,
             Result: null,
