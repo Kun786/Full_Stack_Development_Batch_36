@@ -12,8 +12,7 @@ import { ProductService } from 'src/app/Shared/Services/product.service';
 export class ProductsComponent implements OnInit {
   @ViewChild('FileSelect') FileSelect: ElementRef | any;
 
-
-  color = ["Red", "Black", "Blue"];
+  color = ["Red", "Black", "Blue", 'Olive'];
   categories = ["Cap", "Hoodies", "Watch", "Bags"];
   selectSize = ["S", "M", "L", "X-L", "XX-L"];
   newSizeArray: any = [];
@@ -27,7 +26,7 @@ export class ProductsComponent implements OnInit {
   ) { this.buildForm() }
 
   ngOnInit(): void {
-    let MyArray = [1, 2, 3, 4, 5];
+    // let MyArray = [1, 2, 3, 4, 5];
     //    const [...newArray] = MyArray;
 
 
@@ -54,7 +53,7 @@ export class ProductsComponent implements OnInit {
       companyName: new FormControl('', [Validators.required, Validators.pattern(/^[A-Za-z]+$/)]),
       category: new FormControl('', Validators.required),
       size: new FormArray([]),
-      productMaterial: new FormControl('', Validators.required),
+      productMaterial: new FormControl('', Validators.required)
     })
   }
 
@@ -63,7 +62,7 @@ export class ProductsComponent implements OnInit {
       this.newSizeArray.push(event.target.value);
     }
     else {
-      this.newSizeArray = this.newSizeArray.filter((value: any) => value != event.target.value)
+      this.newSizeArray = this.newSizeArray.filter((value: any) => value != event.target.value);
     }
   }
 
@@ -71,7 +70,7 @@ export class ProductsComponent implements OnInit {
     let filesLength = event.target.files.length;
     if (event.target.files.length <= 5) {
       [...event.target.files].forEach(file => this.imageArray.push(file));
-      this.imageArray;
+      this.disableButtonTrue = false;
     } else {
       this.imageArray = [];
       this.FileSelect.nativeElement.value = null;
@@ -82,8 +81,8 @@ export class ProductsComponent implements OnInit {
 
   submitProductForm() {
     this.newSizeArray.forEach((elements: string) => {
-      let formControl = new FormControl(elements)
-      this.myProductForm.get("size").push(formControl)
+      let formControl = new FormControl(elements);
+      this.myProductForm.get("size").push(formControl);
     })
 
     // this.imageArray.forEach((element: any) => {
@@ -91,6 +90,7 @@ export class ProductsComponent implements OnInit {
     //   this.myProductForm.get("image").push(formControl)
     // })
 
+    
     let MultiPartFormData = new FormData();
     MultiPartFormData.append('productName', this.myProductForm.get('productName').value);
     MultiPartFormData.append('quantity', this.myProductForm.get('quantity').value);
@@ -111,6 +111,8 @@ export class ProductsComponent implements OnInit {
 
     this.ProductService.CreateProductCard(MultiPartFormData).subscribe((ResponseComingFromBackend: any) => {
       this.ToastrService.success(ResponseComingFromBackend.Message);
+      this.myProductForm.reset();
+      this.FileSelect.nativeElement.value = null;
     })
   }
 

@@ -12,4 +12,8 @@ export class ProductService {
   CreateProductCard(Payload:any){
     return this.HttpClient.post('http://localhost:8888/ProductManagement/ProductData',Payload);
   }
+
+  GetAllProducts(){
+    return this.HttpClient.get('http://localhost:8888/ProductManagement/GetProductData');
+  }
 }

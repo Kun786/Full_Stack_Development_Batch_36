@@ -1,1 +1,15 @@
-<p>products works!</p>
+<div class="container my-5">
+    <div class="row">
+        <div class="col" *ngFor="let data of AllProducts">
+            <div class="card" style="width: 18rem;">
+                <img [src]="Url+data.imageDetaisl[0].ImageUrl" class="card-img-top" [alt]="data.productName">
+                <div class="card-body">
+                  <h5 class="card-title">{{data.productName}}</h5>
+                  <p class="card-text">Description: {{data.description}}</p>
+                  <p class="card-text">Quantity: {{data.quantity}}</p>
+                  <a  class="btn btn-primary w-100">Check Product</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
