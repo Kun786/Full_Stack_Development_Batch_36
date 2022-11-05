@@ -2,11 +2,11 @@
 const mongoose = require('mongoose');
 
 // Date
-const today = new Date();
-const day = today.getDate();
-const month = today.getMonth() + 1;
-const year = today.getFullYear();
-const time = today.getTime();
+const today = new Date(); //date class
+const day = today.getDate(); //day
+const month = today.getMonth() + 1; //month
+const year = today.getFullYear(); //year
+const time = today.getTime(); //time 
 
 
 //Start Block Schema Creating
@@ -31,7 +31,7 @@ const ProductSchema = mongoose.Schema({
         type: String,
         default: `${year}-${month}-${day}-${time}`,
     }
-}, { timeStamp: true })
+}, { timestamps: true })
 
 
 //Exporting The Schema
