@@ -1,0 +1,8 @@
+.grid-Image{
+    height: 25px;
+    width: 25px;
+}
+
+i:hover{
+    cursor: pointer;
+}

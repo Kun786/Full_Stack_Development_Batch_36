@@ -16,4 +16,8 @@ export class ProductService {
   GetAllProducts(){
     return this.HttpClient.get('http://localhost:8888/ProductManagement/GetProductData');
   }
+
+  GetProductById(Id:any){
+    return this.HttpClient.get(`http://localhost:8888/ProductManagement/GetProductById/${Id}`)
+  }
 }

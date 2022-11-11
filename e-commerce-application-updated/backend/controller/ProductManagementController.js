@@ -55,6 +55,26 @@ const GetProductData = async (req, res) => {
     }
 }
 
+const GetProductById = async (req, res) => {
+    try {
+        const Id = req.params._id;
+        const DocToGet = await ProductModel.findOne(
+            { _id: Id }
+        );
+        res.json({
+            Message: 'All Documents Found',
+            Data: true,
+            Result: DocToGet
+        })
+    } catch (error) {
+        res.json({
+            Message: error.mesage,
+            Result: null,
+            Data: false
+        })
+    }
+}
+
 const UpdateMyProductData = async (req, res) => {
     try {
         const DocToUpdate = await ProductModel.updateOne(
@@ -91,5 +111,6 @@ module.exports = {
     ProductData,
     GetProductData,
     UpdateMyProductData,
-    DeleteProductData
+    DeleteProductData,
+    GetProductById
 }

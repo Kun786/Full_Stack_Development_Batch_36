@@ -29,13 +29,6 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">
-              <span data-feather="file"></span>
-              <i class="fa-solid fa-list me-2"></i> User-List
-              <hr>
-            </a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" routerLink="./products">
               <span data-feather="shopping-cart"></span>
               <i class="fa-solid fa-cart-arrow-down me-2"></i>Create-Products
@@ -43,7 +36,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">
+            <a class="nav-link" [routerLink]="['./product-analytics']" routerLinkActive="router-link-active" >
               <span data-feather="shopping-cart"></span>
               <i class="fa-solid fa-chart-simple me-2"></i>Product-Analytics
              <hr>

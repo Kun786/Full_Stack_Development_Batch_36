@@ -7,7 +7,8 @@ const {
     ProductData,
     GetProductData,
     UpdateMyProductData,
-    DeleteProductData
+    DeleteProductData,
+    GetProductById
  } = require('../controller/ProductManagementController');
 
 
@@ -21,5 +22,6 @@ Router.post('/ProductData',UploadProductImage.array('images',20),ProductData);
 Router.get('/GetProductData',GetProductData);
 Router.post('/UpdateMyProductData',UpdateMyProductData);
 Router.delete('/DeleteProductData',DeleteProductData);
+Router.get('/GetProductById/:_id',GetProductById)
 
 module.exports = Router;
