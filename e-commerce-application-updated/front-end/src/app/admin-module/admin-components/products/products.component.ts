@@ -88,7 +88,8 @@ export class ProductsComponent implements OnInit {
     // this.imageArray.forEach((element: any) => {
     //   let formControl = new FormControl(element)
     //   this.myProductForm.get("image").push(formControl)
-    // })
+    // }) 
+    
 
     
     let MultiPartFormData = new FormData();
@@ -104,9 +105,7 @@ export class ProductsComponent implements OnInit {
     // MultiPartFormData.append('image',this.myProductForm.get('image').value);
     this.imageArray.forEach((ImagesData: any) => {
       MultiPartFormData.append('images', ImagesData);//Appending values to the getData varibale from FormGroup
-    })
-
-
+    }) 
 
 
     this.ProductService.CreateProductCard(MultiPartFormData).subscribe((ResponseComingFromBackend: any) => {

@@ -73,6 +73,9 @@
             },
             "development": {
               "browserTarget": "front-end:build:development"
+            },
+            "dev": {
+              "browserTarget": "front-end:build:dev"
             }
           },
           "defaultConfiguration": "development"
